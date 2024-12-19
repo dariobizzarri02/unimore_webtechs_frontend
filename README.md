@@ -1,61 +1,60 @@
-
 # Daimon Esports
 
-La seguente tesi descrive e sostiene lo sviluppo di Daimon Esports, un portale web dedicato alla creazione e gestione di competizioni esports principalmente amatoriali, senza escludere tuttavia potenziali applicazioni ufficiali.
+The following thesis describes and supports the development of Daimon Esports, a web portal dedicated to the creation and management of mainly amateur esports competitions, without excluding potential official applications.
 
 ![[Pasted image 20240831230240.png]]
-_Schermata principale della piattaforma._
+_Main screen of the platform._
 
-# Requisiti di Installazione
+# Installation Requirements
 
-- Connessione a internet
-- Dispositivo locale Linux, Windows o MAC
+- Internet connection
+- Local Linux, Windows or MAC device
 - Git
 - Docker
 
-# Installazione Backend
+# Backend Installation
 
 - git clone https://github.com/mbentity/daimon_esports
 - docker build -t daimon_esports daimon_esports
 - docker run -p 8000:8000 daimon_esports
 
-# Installazione Frontend
+# Frontend Installation
 
 - git clone https://github.com/mbentity/daimon_esports_frontend
 - docker build -t daimon_esports_frontend daimon_esports_frontend
 - docker run -p 3000:3000 daimon_esports_frontend
 
-# Accesso
+# Access
 
-- in caso di necessità di effettuare test, è presente un account admin:
-	- username: techweb
-	- password: techweb
+- in case of need to perform tests, there is a account admin:
+- username: techweb
+- password: techweb
 
-# Consegna
+# Delivery
 
-### Come riportato dalla mail di proposta del progetto:
-"Applicazione Web per l'organizzazione, partecipazione e visione di tornei esports.
-Pensata per essere utilizzabile da utenti anonimi e registrati:
-- gli utenti anonimi possono consultare le classifiche di tutti i tornei, e sintonizzarsi sui canali di trasmissione delle partite attualmente in corso
-- gli utenti registrati possono iscriversi a tornei, creando delle squadre o richiedendo di unirsi a squadre esistenti
-- gli utenti registrati possono ricevere l'autorizzazione di organizzare tornei, specificando la disciplina, la piattaforma di ritrovo, il canale di trasmissione e le date di svolgimento
-Il sistema deve consentire la ricerca di tornei in base a criteri come disciplina, data di inizio e disponibilità delle iscrizioni.
-Il sistema deve gestire autonomamente i posti disponibili per ogni squadra e per ogni torneo, e permettere una basilare comunicazione tra utenti per inviare e approvare richieste di squadra.
-Ogni azione deve essere modificabile e reversibile: gli organizzatori devono poter modificare o cancellare un torneo, i capi squadra devono poter modificare o sciogliere una squadra e i giocatori devono poter abbandonare una squadra, e di conseguenza il torneo."
+### As reported in the project proposal email:
+"Web application for organizing, participating in and viewing esports tournaments.
+Designed to be usable by anonymous and registered users:
+- anonymous users can consult the rankings of all tournaments, and tune into the broadcast channels of the matches currently in progress
+- registered users can sign up for tournaments, creating teams or requesting to join existing teams
+- registered users can receive authorization to organize tournaments, specifying the discipline, the meeting platform, the broadcast channel and the dates of the tournament
+The system must allow the search for tournaments based on criteria such as discipline, start date and availability of registrations.
+The system must independently manage the available places for each team and for each tournament, and allow basic communication between users to send and approve team requests.
+Every action must be modifiable and reversible: organizers must be able to modify or cancel a tournament, team leaders must be able to modify or disband a team, and players must be able to abandon a team, and consequently the tournament."
 
-# Struttura
+# Structure
 
-Il progetto è suddiviso in tre parti:
+The project is divided into three parts:
 
-- Tesi di presentazione
-- Frontend: applicativo multipage in NextJS (Node, Typescript)
+- Presentation thesis
+- Frontend: multipage application in NextJS (Node, Typescript)
 - Backend: API in Django Rest Framework (Django, Python)
 
-Frontend e Backend sono dockerizzati, come desumibile dal processo di installazione, e devono essere eseguiti entrambi per il corretto funzionamento della piattaforma.
-Le immagini Docker sono state costruite basandosi su Alpine, una distribuzione Linux leggera ed efficiente.
-Una volta buildate e eseguite entrambe le immagini, il portale è raggiungibile in locale su http://localhost:3000, mentre la piattaforma admin è raggiungibile, sempre in locale, su http://localhost:8000/admin.
+Frontend and Backend are dockerized, as can be deduced from the installation process, and must both be executed for the correct functioning of the platform.
+The Docker images were built based on Alpine, a lightweight and efficient Linux distribution.
+Once both images are built and executed, the portal can be reached locally at http://localhost:3000, while the admin platform can be reached, always locally, at http://localhost:8000/admin.
 
-# Strumenti
+# Tools
 
-Frontend e Backend sono stati sviluppati con Visual Studio Code come IDE di preferenza.
-La tesi è stata scritta su Obsidian.md e compattata in PDF tramite Pandoc.
+Frontend and Backend were developed with Visual Studio Code as the preferred IDE.
+The thesis was written on Obsidian.md and compressed into PDF via Pandoc.
